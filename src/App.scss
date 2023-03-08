@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&family=Palanquin+Dark:wght@500;600;700&display=swap');
+
+@layer components {
+    .carousel-item {
+        display: block;
+        opacity: 0;
+
+        &.active {
+            opacity: 1;
+        }
+    }
+    .carousel-dark .carousel-indicators [data-bs-target] {
+        background: #cfcfcf 0% 0% no-repeat padding-box;
+
+        &.active {
+            background: transparent linear-gradient(268deg, #0000ff 0%, #29c2e2 100%) 0% 0% no-repeat padding-box;
+            border-radius: 10px;
+        }
+    }
+}
